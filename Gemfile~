@@ -1,0 +1,9 @@
+source "https://rubygems.org"
+#source "http://api.berkshelf.com"
+
+gem 'knife-solo'
+gem 'berkshelf'
+
+#cookbook 'java'
+
+

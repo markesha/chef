@@ -1,0 +1,151 @@
+Running Chef on localhost...
+Checking Chef version...
+Installing Berkshelf cookbooks to 'cookbooks'...
+Resolving cookbook dependencies...
+Using chef-solo-search (0.5.1)
+Using java (1.31.0)
+Vendoring chef-solo-search (0.5.1) to cookbooks/chef-solo-search
+Vendoring java (1.31.0) to cookbooks/java
+Uploading the kitchen...
+Generating solo config...
+Running Chef...
+Starting Chef Client, version 12.2.1[0m
+Compiling Cookbooks...[0m
+/home/vagrant/chef-solo/cookbooks-2/chef-solo-search/libraries/vendor/chef/solr_query/lucene_nodes.rb:22: warning: already initialized constant Lucene::SEP
+/home/vagrant/chef-solo/cookbooks-2/chef-solo-search/libraries/vendor/chef/solr_query/lucene_nodes.rb:22: warning: previous definition of SEP was here
+[2015-04-17T13:03:03+00:00] WARN: Cloning resource attributes for bash[put_files] from prior resource (CHEF-3694)
+[2015-04-17T13:03:03+00:00] WARN: Previous bash[put_files]: /home/vagrant/chef-solo/cookbooks-3/jboss/recipes/default.rb:52:in `from_file'
+[2015-04-17T13:03:03+00:00] WARN: Current  bash[put_files]: /home/vagrant/chef-solo/cookbooks-3/jboss/recipes/deploy.rb:34:in `from_file'
+Converging 17 resources[0m
+Recipe: java::openjdk[0m
+  * apt_package[openjdk-6-jdk] action install (up to date)
+  * apt_package[openjdk-6-jre-headless] action install (up to date)
+  * java_alternatives[set-java-alternatives] action set (up to date)
+Recipe: java::default_java_symlink[0m
+  * link[/usr/lib/jvm/default-java] action create (up to date)
+Recipe: java::set_java_home[0m
+  * ruby_block[set-env-java-home] action run
+    [32m- execute the ruby block set-env-java-home[0m
+[0m  * directory[/etc/profile.d] action create (up to date)
+  * file[/etc/profile.d/jdk.sh] action create (up to date)
+Recipe: jboss::default[0m
+  * user[jboss] action create (up to date)
+  * group[jboss] action modify
+    [32m- modify group jboss[0m
+    [32m- replace group members with new list of members[0m
+[0m  * directory[/usr/local/jboss] action create (up to date)
+  * bash[put_files] action run (skipped due to not_if)
+  * directory[/usr/local/jboss/default] action create (up to date)
+  * template[/etc/init.d/jboss] action create (up to date)
+  * service[jboss] action enable (up to date)
+  * service[jboss] action start
+    [32m- start service service[jboss][0m
+[0m  * template[/etc/sudoers.d/jboss] action create (up to date)
+Recipe: jboss::deploy[0m
+  * apt_package[unzip] action install (up to date)
+  * bash[put_files] action run
+    [32m- execute "bash"  "/tmp/chef-script20150417-17940-18oneyf"[0m
+[0m[0m
+Running handlers:[0m
+Running handlers complete
+[0mChef Client finished, 4/17 resources updated in -7148.030743244 seconds[0m
+Running Chef on localhost...
+Checking Chef version...
+Installing Berkshelf cookbooks to 'cookbooks'...
+Resolving cookbook dependencies...
+Using chef-solo-search (0.5.1)
+Using java (1.31.0)
+Vendoring chef-solo-search (0.5.1) to cookbooks/chef-solo-search
+Vendoring java (1.31.0) to cookbooks/java
+Uploading the kitchen...
+Generating solo config...
+Running Chef...
+Starting Chef Client, version 12.2.1[0m
+Compiling Cookbooks...[0m
+/home/vagrant/chef-solo/cookbooks-2/chef-solo-search/libraries/vendor/chef/solr_query/lucene_nodes.rb:22: warning: already initialized constant Lucene::SEP
+/home/vagrant/chef-solo/cookbooks-2/chef-solo-search/libraries/vendor/chef/solr_query/lucene_nodes.rb:22: warning: previous definition of SEP was here
+[2015-04-17T13:07:13+00:00] WARN: Cloning resource attributes for bash[put_files] from prior resource (CHEF-3694)
+[2015-04-17T13:07:13+00:00] WARN: Previous bash[put_files]: /home/vagrant/chef-solo/cookbooks-3/jboss/recipes/default.rb:52:in `from_file'
+[2015-04-17T13:07:13+00:00] WARN: Current  bash[put_files]: /home/vagrant/chef-solo/cookbooks-3/jboss/recipes/deploy.rb:34:in `from_file'
+Converging 17 resources[0m
+Recipe: java::openjdk[0m
+  * apt_package[openjdk-6-jdk] action install (up to date)
+  * apt_package[openjdk-6-jre-headless] action install (up to date)
+  * java_alternatives[set-java-alternatives] action set (up to date)
+Recipe: java::default_java_symlink[0m
+  * link[/usr/lib/jvm/default-java] action create (up to date)
+Recipe: java::set_java_home[0m
+  * ruby_block[set-env-java-home] action run
+    [32m- execute the ruby block set-env-java-home[0m
+[0m  * directory[/etc/profile.d] action create (up to date)
+  * file[/etc/profile.d/jdk.sh] action create (up to date)
+Recipe: jboss::default[0m
+  * user[jboss] action create (up to date)
+  * group[jboss] action modify (up to date)
+  * directory[/usr/local/jboss] action create (up to date)
+  * bash[put_files] action run
+    [32m- execute "bash"  "/tmp/chef-script20150417-18944-mgkjtr"[0m
+[0m  * directory[/usr/local/jboss/default] action create (up to date)
+  * template[/etc/init.d/jboss] action create (up to date)
+  * service[jboss] action enable (up to date)
+  * service[jboss] action start
+    [32m- start service service[jboss][0m
+[0m  * template[/etc/sudoers.d/jboss] action create (up to date)
+Recipe: jboss::deploy[0m
+  * apt_package[unzip] action install (up to date)
+  * bash[put_files] action run
+    [32m- execute "bash"  "/tmp/chef-script20150417-18944-1jojfd7"[0m
+[0m[0m
+Running handlers:[0m
+Running handlers complete
+[0mChef Client finished, 4/18 resources updated in 87.896933326 seconds[0m
+Running Chef on localhost...
+Checking Chef version...
+Installing Berkshelf cookbooks to 'cookbooks'...
+Resolving cookbook dependencies...
+Using java (1.31.0)
+Using chef-solo-search (0.5.1)
+Vendoring chef-solo-search (0.5.1) to cookbooks/chef-solo-search
+Vendoring java (1.31.0) to cookbooks/java
+Uploading the kitchen...
+Generating solo config...
+Running Chef...
+Starting Chef Client, version 12.2.1[0m
+Compiling Cookbooks...[0m
+/home/vagrant/chef-solo/cookbooks-2/chef-solo-search/libraries/vendor/chef/solr_query/lucene_nodes.rb:22: warning: already initialized constant Lucene::SEP
+/home/vagrant/chef-solo/cookbooks-2/chef-solo-search/libraries/vendor/chef/solr_query/lucene_nodes.rb:22: warning: previous definition of SEP was here
+[2015-04-17T13:49:14+00:00] WARN: Cloning resource attributes for bash[put_files] from prior resource (CHEF-3694)
+[2015-04-17T13:49:14+00:00] WARN: Previous bash[put_files]: /home/vagrant/chef-solo/cookbooks-3/jboss/recipes/default.rb:52:in `from_file'
+[2015-04-17T13:49:14+00:00] WARN: Current  bash[put_files]: /home/vagrant/chef-solo/cookbooks-3/jboss/recipes/deploy.rb:34:in `from_file'
+Converging 17 resources[0m
+Recipe: java::openjdk[0m
+  * apt_package[openjdk-6-jdk] action install (up to date)
+  * apt_package[openjdk-6-jre-headless] action install (up to date)
+  * java_alternatives[set-java-alternatives] action set (up to date)
+Recipe: java::default_java_symlink[0m
+  * link[/usr/lib/jvm/default-java] action create (up to date)
+Recipe: java::set_java_home[0m
+  * ruby_block[set-env-java-home] action run
+    [32m- execute the ruby block set-env-java-home[0m
+[0m  * directory[/etc/profile.d] action create (up to date)
+  * file[/etc/profile.d/jdk.sh] action create (up to date)
+Recipe: jboss::default[0m
+  * user[jboss] action create (up to date)
+  * group[jboss] action modify (up to date)
+  * directory[/usr/local/jboss] action create (up to date)
+  * bash[put_files] action run
+    [32m- execute "bash"  "/tmp/chef-script20150417-19917-s6t7kt"[0m
+[0m  * directory[/usr/local/jboss/default] action create (up to date)
+  * template[/etc/init.d/jboss] action create (up to date)
+  * service[jboss] action enable (up to date)
+  * service[jboss] action start
+    [32m- start service service[jboss][0m
+[0m  * template[/etc/sudoers.d/jboss] action create (up to date)
+Recipe: jboss::deploy[0m
+  * apt_package[unzip] action install (up to date)
+  * bash[put_files] action run
+    [32m- execute "bash"  "/tmp/chef-script20150417-19917-1ptqiic"[0m
+[0m[0m
+Running handlers:[0m
+Running handlers complete
+[0mChef Client finished, 4/18 resources updated in 85.140583449 seconds[0m
